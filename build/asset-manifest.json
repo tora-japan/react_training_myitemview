@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_training_myitemview/build/static/css/main.e6c13ad2.css",
-    "main.js": "/react_training_myitemview/build/static/js/main.5768dc07.js",
-    "static/js/787.cff6ef16.chunk.js": "/react_training_myitemview/build/static/js/787.cff6ef16.chunk.js",
-    "index.html": "/react_training_myitemview/build/index.html",
-    "static/media/trash.svg": "/react_training_myitemview/build/static/media/trash.fb4e0563a07bb1dc1656db28a89659fb.svg",
-    "main.e6c13ad2.css.map": "/react_training_myitemview/build/static/css/main.e6c13ad2.css.map",
-    "main.5768dc07.js.map": "/react_training_myitemview/build/static/js/main.5768dc07.js.map",
-    "787.cff6ef16.chunk.js.map": "/react_training_myitemview/build/static/js/787.cff6ef16.chunk.js.map"
+    "main.css": "./static/css/main.e6c13ad2.css",
+    "main.js": "./static/js/main.ee2e579f.js",
+    "static/js/787.cff6ef16.chunk.js": "./static/js/787.cff6ef16.chunk.js",
+    "index.html": "./index.html",
+    "static/media/trash.svg": "./static/media/trash.fb4e0563a07bb1dc1656db28a89659fb.svg",
+    "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
+    "main.ee2e579f.js.map": "./static/js/main.ee2e579f.js.map",
+    "787.cff6ef16.chunk.js.map": "./static/js/787.cff6ef16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5768dc07.js"
+    "static/js/main.ee2e579f.js"
   ]
 }
