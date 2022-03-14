@@ -48,6 +48,7 @@ const MyItemView = () => {
   const [aName, setName] = useState("");
   const [groupCount, setGroupCount] = useState(3);
   const [itemCount, setItemCount] = useState(10);
+  const [textFile, setTextFile] = useState("");
 
   //console.log(items);
 
@@ -82,6 +83,23 @@ const MyItemView = () => {
     });
     setItems(itemsSort(newItems));
     setName("");
+  }
+  // テキストリストを追加する
+  function itemAddTextList(lines) {
+    if (lines === undefined) return;
+    if (lines.length === 0) return;
+    let newItems = [...items];
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i] === undefined) continue;
+      if (lines[i].length === 0) continue;
+      // console.log(lines[i].length);
+      newItems[0].push({
+        uid: uniqueId(),
+        isSelected: false,
+        name: lines[i],
+      });
+    }
+    setItems(itemsSort(newItems));
   }
 
   // アイテムを移動する
@@ -206,6 +224,28 @@ const MyItemView = () => {
   // ダミーデータを入れてリセット（ルートのみにアイテムを追加する）
   const handleClickItemsDummySet2 = (count, itemMax) => {
     setItems(dummyItems2(count, itemMax));
+  };
+
+  // テキストファイルを読み込む
+  const handleOnFileInputChange = (e) => {
+    console.log("テキストファイルを読み込む");
+    console.log(e.target.files);
+    if (e.target.files.length === 0) return;
+
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const text = e.target.result;
+      //console.log(text);
+
+      // テキストファイルを改行で分割する
+      const lines = text.split("\n");
+      //console.log(lines);
+      itemAddTextList(lines);
+
+      setTextFile("");
+    };
+    reader.readAsText(file); // 読み込み開始
   };
 
   // メイングループ（ルート）
@@ -411,6 +451,15 @@ const MyItemView = () => {
         >
           追加
         </button>
+      </div>
+
+      <div className="flex">
+        <div className="px-4 py-2">テキスト読み込み</div>
+        <input
+          type="file"
+          onChange={handleOnFileInputChange}
+          value={textFile}
+        />
       </div>
 
       <div className="flex ">
