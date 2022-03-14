@@ -19,12 +19,11 @@ cssは、tailwndcssのcdnを使っています。
 
 # 画面
 
+[Pages](https://tora-japan.github.io/react_training_myitemview/)
+
+[Pages:buildして動くもの](https://tora-japan.github.io/react_training_myitemview/build)
+
 <img src=".\readme_img\clip_1.png" >
-
-<a href src="https://tora-japan.github.io/react_training_myitemview/">pagesのトップページ</a>
-
-<a href src="https://tora-japan.github.io/react_training_myitemview/build/">buildしたもの</a>
-
 
 # ＵＩ
 
